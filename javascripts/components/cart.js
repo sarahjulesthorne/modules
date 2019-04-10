@@ -29,7 +29,7 @@ console.log(myCart);
   domString += '</div><div class="row d-flex flex-wrap">';
   myCart.forEach((book) => {
     domString += `<div class="card col-2">`;
-    domString += `  <img src=${book.image} class="card-img-top" alt="...">`;
+    domString += `  <img src=${book.imageUrl} class="card-img-top" title="${book.imageAlt}" alt="${book.imageAlt}">`;
     domString += `  <div class="card-body">`;
     domString += `    <h5 class="card-title">${book.title}</h5>`;
     domString += `    <p class="card-text">${book.price}</p>`;

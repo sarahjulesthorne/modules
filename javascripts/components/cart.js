@@ -8,8 +8,19 @@ const getCart = () => {
 return cart;
 };
 
+const buyEvent = (event) => {
+event.preventDefault();
+const myCart = getCart();
+const total = myCart.reduce((a, b) => {
+return a + b.price;
+
+}, 0);
+window.alert(`You owe ${total.toFixed(2)}`);
+};
+
 const cartToDom = () => {
 
+    
 const myCart = getCart();
 console.log(myCart);
   let domString = '<div class="row">';
@@ -27,6 +38,7 @@ console.log(myCart);
   });
   domString += `</div>`;
   util.printToDom('cart-container', domString);
+ document.getElementById('purchase-btn').addEventListener('click', buyEvent);
 };
 
 export default {setCart, cartToDom};

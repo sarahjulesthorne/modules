@@ -9,7 +9,9 @@ const bookInfo = {
 
 //getter function created to act as secure means of passing data to other modules
 const getBook = () => {
-return bookInfo;
+    return bookInfo;
 };
 
-export default {getBook};
+export default {
+    getBook
+};

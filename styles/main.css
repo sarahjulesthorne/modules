@@ -1,6 +1,10 @@
 body {
     background-color: lightblue;
 }
+
+//regulated height of image cause it wasn't showing up properly
 .book-img {
     height: 200px;
+    width: 200px;
+    margin: auto;
 }
